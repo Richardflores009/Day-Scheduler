@@ -20,9 +20,10 @@ function updateColors() {
     })
 }
 updateColors();
-// check if you can see textarea input
-// store input to local storage
-//
+
+// setting intervals for every 15 minutes to refresh the color codes
+var intervalID = window.setInterval(updateColors, 900000);
+
 var taskEffect = function (data) {
 
     if (data == currentHour) {
