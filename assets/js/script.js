@@ -5,7 +5,21 @@ var currentDay = moment().format('dddd, MMMM Do YYYY')
 var currentHour = moment().hours()
 $("#currentDay").replaceWith(currentDay)
 
-
+function updateColors() {
+    $(".time-color").each(function () {
+        var thisBlock = Number($(this).attr("data-name"))
+        if (thisBlock === currentHour) {
+            $(this).css("background-color", "salmon")
+        } else if (thisBlock < currentHour) {
+            console.log("less than")
+            $(this).css("background-color", "lightgray")
+        } else if (thisBlock > currentHour) {
+            console.log("greater than")
+            $(this).css("background-color", "lightgreen")
+        }
+    })
+}
+updateColors();
 // check if you can see textarea input
 // store input to local storage
 //
