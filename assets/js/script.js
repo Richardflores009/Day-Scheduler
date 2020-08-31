@@ -45,7 +45,6 @@ var loadSchedule = function (value, hour) {
     // localStorage.setItem("tasks", JSON.stringify(tasks))
     // // var content = $("div").children('div').text()
     // console.log(tasks.length)
-
     // button name =
 }
 
